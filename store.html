@@ -212,7 +212,12 @@
             <div class="row my-3">
               <div class="col-sm-6 mx-auto col d-flex justify-content-center flex-wrap">
                 <button type="button" class="btn btn-black my-2">Continue shipping</button>
-                <button type="button" class="btn btn-yellow ml-2 my-2">checkout</button>
+                <button type="button" class="btn btn-yellow ml-2 my-2" onclick="redirectToThankYou()">checkout</button>
+                <script>
+                  function redirectToThankYou() {
+                      window.location.href = "thankyou.html";
+                  }
+              </script>
               </div>
             </div>
             <!-- cart total -->
