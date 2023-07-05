@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey="M2ODV6AWyGfOBUvawrkWN73LJhnkWyJL";;analytics.SNIPPET_VERSION="4.16.1";
+        analytics.load("M2ODV6AWyGfOBUvawrkWN73LJhnkWyJL");
+        analytics.page();
+        }}();
+      </script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,7 +17,7 @@
 
      <!-- Start VWO Async SmartCode -->
 <script type='text/javascript' id='vwoCode'>
-    var account_ids = location.search.split('id=')[1] ? location.search.split('id=')[1] : '706039';
+    var account_ids = location.search.split('id=')[1] ? location.search.split('id=')[1] : '8000650';
     window._vwo_code=window._vwo_code || (function() {
     var account_id = account_ids,
     version = 1.5,
@@ -73,20 +79,31 @@ h1 {
     margin: 1rem;
 }
 </style>
-<body>  
-        <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-572CFRS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-572CFRS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div>
         <h1>Thank You!</h1>
         <p class="mesg">
-            Thank you for ordering from us. Your order number is <strong>007</strong> and the total is <strong>$1350</strong>.
+            Thank you for ordering from us. Your order number is <strong>007</strong> and the total is
+            <strong>$1350</strong>.
         </p>
-        <hr> 
+        <hr>
         <p class="btns">
-          <a href="https://palash9088.github.io/Ecommerce-Website">Continue to homepage</a>
+            <a href="https://palash9088.github.io/Ecommerce-Website">Continue to homepage</a>
+            <button onclick="sendEvent()">Send Event</button>
         </p>
     </div>
+
+    <script>
+        function sendEvent() {
+            analytics.track("Item Purchased", {
+                value: "200000",
+                shopName: "Hanushree Jewellers"
+            });
+        }
+    </script>
 </body>
 </html>
