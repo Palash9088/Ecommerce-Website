@@ -93,16 +93,22 @@ h1 {
         <hr>
         <p class="btns">
             <a href="https://palash9088.github.io/Ecommerce-Website">Continue to homepage</a>
-            <button onclick="sendEvent()">Send Event</button>
+            <button onclick="sendEventTrack()">Send Event Track</button>
+            <button onclick="sendEventIndentify()">Send Event Identify</button>
         </p>
     </div>
 
     <script>
-        function sendEvent() {
+        function sendEventTrack() {
             analytics.track("Item Purchased", {
                 value: "200000",
                 shopName: "Hanushree Jewellers"
             });
+        }
+    </script>
+    <script>
+        function sendEventIndentify() {
+            analytics.identify("Page visit");
         }
     </script>
 </body>
