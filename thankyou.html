@@ -7,17 +7,17 @@
         analytics.page();
         }}();
       </script>
-    <!-- Google Tag Manager -->
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-572CFRS');</script>
+    })(window,document,'script','dataLayer','GTM-PPJHV42');</script>
     <!-- End Google Tag Manager -->
 
      <!-- Start VWO Async SmartCode -->
 <script type='text/javascript' id='vwoCode'>
-    var account_ids = location.search.split('id=')[1] ? location.search.split('id=')[1] : '8000650';
+    var account_ids = location.search.split('id=')[1] ? location.search.split('id=')[1] : '706039';
     window._vwo_code=window._vwo_code || (function() {
     var account_id = account_ids,
     version = 1.5,
@@ -78,22 +78,46 @@ h1 {
 .mesg {
     margin: 1rem;
 }
+.btns {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btns:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.btns:active {
+  background-color: #ddd;
+  color: #000;
+}
 </style>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-572CFRS"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPJHV42"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <div>
         <h1>Thank You!</h1>
         <p class="mesg">
             Thank you for ordering from us. Your order number is <strong>007</strong> and the total is
-            <strong>$1350</strong>.
+            <strong>$940</strong>.
         </p>
         <hr>
-        <p class="btns">
-            <a href="https://palash9088.github.io/Ecommerce-Website">Continue to homepage</a>
-            <button onclick="sendEventTrack()">Send Event Track</button>
+        <p>
+            <a href="https://palash9088.github.io/Ecommerce-Website" class="btns">Continue to homepage</a>
+        </p>
+        <p>
+            <a href="#" class="btns" onclick="sendEventTrack()">Send Event Track</a>
+            <a href="#" class="btns" onclick="sendIdentify()">Send Identify Track</a>
+
             <!-- <button onclick="sendEventIndentify()">Send Event Identify</button> -->
         </p>
     </div>
@@ -104,7 +128,47 @@ h1 {
                 value: "200000",
                 shopName: "Hanushree Jewellers"
             });
+            alert("Event sent")
         }
     </script>
+
+<script>
+    // Generate a random ID
+    function generateRandomId() {
+      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      var randomId = '';
+      for (var i = 0; i < 10; i++) {
+        randomId += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return randomId;
+    }
+    function generateRandomName() {
+        var adjectives = ['Red', 'Blue', 'Green', 'Yellow', 'Crazy', 'Happy', 'Silly', 'Funny'];
+        var nouns = ['Cat', 'Dog', 'Elephant', 'Lion', 'Monkey', 'Tiger', 'Zebra', 'Giraffe'];
+        var randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+        var randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+        return randomAdjective + ' ' + randomNoun;
+}
+
+
+    // Send the random ID via Segment.com
+    function sendIdentify() {
+      var randomId = generateRandomId();
+      var randomName = generateRandomName();
+
+      // Identify the user with the random ID
+      analytics.identify(randomId);
+
+      // Track the button click event
+      analytics.identify(randomId, {
+                name:  randomName,
+                email: randomName+"@gmail.com",
+                });
+      alert("Identify event sent,"
+      + " Name is "+ randomName+ " ID is "+ randomId)
+    }
+  </script>
+
 </body>
 </html>
