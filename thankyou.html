@@ -157,9 +157,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var randomId = generateRandomId();
       var randomName = generateRandomName();
 
-      // Identify the user with the random ID
-      analytics.identify(randomId);
-
       // Track the button click event
       analytics.identify(randomId, {
                 name:  randomName,
