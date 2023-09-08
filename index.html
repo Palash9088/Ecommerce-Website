@@ -65,8 +65,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a href="products.html" class="nav-link">Products</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="singleproduct.html" class="nav-link" src="./js/amplitudescripts/ClickOnSingleProduct.js">Single Product</a>
+              <a href="singleproduct.html" class="nav-link" onclick="logAmplitudeEvent()">Single Product</a>
             </li>
+            <script type="text/javascript">
+              function logAmplitudeEvent() {
+                // Log the Amplitude event with properties
+                amplitude.getInstance().logEvent("Clicked Single Product Link", {
+                  page: "singleproduct.html",
+                  linkText: "Single Product"
+                });
+              }
+            </script>
+                        
             <li class="nav-item mx-2">
               <a href="store.html" class="nav-link" >Store</a>
             </li>
