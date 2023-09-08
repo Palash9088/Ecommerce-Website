@@ -105,7 +105,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
         <hr>
         <p>
-            <a href="https://palash9088.github.io/Ecommerce-Website" class="btns">Continue to homepage</a>
+            <a href="https://palash9088.github.io/Ecommerce-Website" class="btns" onclick="redirectToHomepage()">Continue to homepage</a>
+            <script>
+                function redirectToHomepage() {
+                    console.log("On Thankyou Page");
+                    amplitude.logEvent("Reached to Thankyou Page");
+                    window.location.href = "thankyou.html";
+                    console.log("Cliked on Homepage Button");
+                  }
+            </script>
         </p>
         <p>
             <a href="#" class="btns" onclick="sendEventTrack()">Send Event Track</a>
