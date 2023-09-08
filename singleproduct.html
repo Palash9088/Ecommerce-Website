@@ -196,13 +196,16 @@
             <button class="btn btn-yellow my-2 mx-2" onclick="redirectToCart()">
               Add To Cart
               <script type="text/javascript">
+                
                 function redirectToCart(){
+                console.log("On Product page");
                 amplitude.logEvent("Clicked on Add to Cart button", {
                 productName: "PREMIUM OFFICE ARMCHAIR",
                 price: 200.00,
                 quantity: 4
                 });
                 window.location.href = "store.html";
+                console.log("Clicked on Add to Cart button");
               }
               </script>
             </button>

@@ -151,7 +151,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var randomName = generateRandomName();
 
       // Track the button click event
-      analytics.identify(randomId, {
+      amplitude.logEvent(randomId, {
                 name:  randomName,
                 email: randomName+"@gmail.com",
                 });
