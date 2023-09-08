@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
       event.preventDefault();
 
       // Log the Amplitude event with properties
-      amplitude.getInstance().logEvent("Clicked Single Product Link", {
+      amplitude.logEvent("Clicked Single Product Link", {
         // Add any properties you want to log here
         page: "singleproduct.html",
         linkText: "Single Product"
