@@ -21,8 +21,11 @@
  MParticle 
 <script src="./js/Mparticle.js"></script> -->
 
-    <!-- Amplitude -->
-    <script src="./js/amplitude.js"></script>
+<!-- Amplitude 
+<script src="./js/amplitude.js"></script> -->
+
+<!-- Clarity code -->
+<script src="./js/clarity.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -184,12 +187,12 @@
                     console.log("On Checkout Page");
                     amplitude.logEvent("Clicked on Checkout button.", {
                       productName: "PREMIUM OFFICE ARMCHAIR",
-                      price: 200.00,
+                      price: 200.0,
                       quantity: 4,
-                      sub_total: 400.00,
-                      tax: 120.00,
-                      shipping: 20.00,
-                      order_total: 940.00
+                      sub_total: 400.0,
+                      tax: 120.0,
+                      shipping: 20.0,
+                      order_total: 940.0,
                     });
                     window.location.href = "thankyou.html";
                     console.log("Cliked on Checkout Button");
