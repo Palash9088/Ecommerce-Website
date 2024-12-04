@@ -1,6 +1,6 @@
 const params_id = new URLSearchParams(window.location.search);
 const accId = parseInt(params_id.get("id"));
-const accountId = accId || 706039;
+const accountId = accId || 775633;
 console.log("Account-Id ->", accountId);
 /* eslint-disable no-undef */
 window._vwo_code || (function () {
